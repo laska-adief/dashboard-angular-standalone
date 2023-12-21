@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track $index;let e = $even) {
+    <tr [ngClass]="{even: e}">
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>
+        <div class="action-container">
+          <button class="button edit" (click)="handleEditUser(user)">Edit</button>
+          <button class="button delete" (click)="handleDeleteUser(user)">Delete</button>
+        </div>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
