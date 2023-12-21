@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@dashboard-angular-standalone/dashboard": [
+        "modules/dashboard/src/index.ts"
+      ],
       "@dashboard-angular-standalone/users": ["modules/users/src/index.ts"]
     }
   },
