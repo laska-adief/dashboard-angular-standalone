@@ -1,0 +1,8 @@
+<section>
+  <form [formGroup]="userForm" (submit)="submitForm()" class="input-form">
+    <input type="text" placeholder="Name" formControlName="name">
+    <input type="text" placeholder="Username" formControlName="username">
+    <input type="email" placeholder="Email" formControlName="email">
+    <button>Submit</button>
+  </form>
+</section>

@@ -1,0 +1,22 @@
+.input-form {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  input {
+    padding: 4px 8px;
+  }
+  
+  button {
+    padding: 4px 8px;
+    background: #36c5c7;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+    &:hover{
+      background: #089698;
+    }
+  }
+}
