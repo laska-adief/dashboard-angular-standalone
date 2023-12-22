@@ -1,0 +1,25 @@
+.card {
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .label {
+    font-size: 1.5rem;
+    color: #11235A;
+  }
+
+  .value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #11235A;
+  }
+}
