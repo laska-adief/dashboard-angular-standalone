@@ -29,20 +29,24 @@ export class UserInputComponent implements OnInit {
 
   initForm() {
     this.userForm = this.fb.group({
-      name: [''],
-      username: [''],
-      email: ['', [Validators.email]],
+      name: ['', [Validators.required]],
+      username: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
     });
   }
 
   submitForm() {
     const tempUser = this.userForm.value;
-    if (this.isEdited) {
-      if (this.editedUser) {
-        this.updateUser(this.editedUser);
+    if (this.userForm.valid) {
+      if (this.isEdited) {
+        if (this.editedUser) {
+          this.updateUser(this.editedUser);
+        }
+      } else {
+        this.createUser(tempUser);
       }
     } else {
-      this.createUser(tempUser);
+      this.userForm.markAllAsTouched();
     }
   }
 
