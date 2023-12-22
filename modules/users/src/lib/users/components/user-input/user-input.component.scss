@@ -5,10 +5,25 @@
 
   input {
     padding: 4px 8px;
+
+    &.ng-invalid.ng-touched{
+      border: 1px solid red;
+    }
+  }
+
+  .error-label {
+    height: 20px;
+    p {
+      display: inline-block;
+      margin-top: .3rem;
+      font-size: 12px;
+      color: red;
+    }
   }
   
   button {
-    padding: 4px 8px;
+    height: max-content;
+    padding: 6px 8px;
     background: #36c5c7;
     color: #ffffff;
     outline: none;
